@@ -1,1 +1,260 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.hidden{display:none;}
+
+.center-screen{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:3;
+}
+
+.welcome-love{
+    font-family:'Pacifico',cursive;
+    font-size:26px;
+    color:#ff1e4d;
+}
+
+#welcomeAnim{
+    font-size:34px;
+    color:yellow;
+    animation:pop 1.2s ease-in-out;
+}
+
+@keyframes pop{
+    0%{transform:scale(0);}
+    60%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+.tabs{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:20px 0;
+    flex-wrap:wrap;
+}
+
+.tabs button{
+    padding:12px 20px;
+    border-radius:25px;
+    border:none;
+    background:white;
+    color:#ff4d6d;
+    font-weight:bold;
+    cursor:pointer;
+    animation:bounce 2.5s infinite;
+}
+
+@keyframes bounce{
+    0%,20%,50%,80%,100%{transform:translateY(0);}
+    40%{transform:translateY(-8px);}
+    60%{transform:translateY(-4px);}
+}
+
+.tab-content{display:none;margin-top:30px;}
+
+.message-box{
+    width:85%;
+    margin:auto;
+    background:rgba(255,255,255,.15);
+    border-radius:25px;
+    padding:25px;
+    line-height:1.9;
+    animation:messageAnim 1.5s ease forwards;
+}
+
+@keyframes messageAnim{
+    from{opacity:0;transform:translateY(30px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+.photos-caption{
+    font-family:'Pacifico',cursive;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+.gallery img{
+    width:180px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.gallery img:hover{transform:scale(1.08);}
+
+iframe{
+    width:320px;
+    border-radius:20px;
+}
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    animation:float 7s linear forwards;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);opacity:0;}
+    50%{opacity:.5;}
+    100%{transform:translateY(-10vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="loveAudio" src="https://cdn.pixabay.com/audio/2022/03/15/audio_4f91c2b6b6.mp3"></audio>
+
+<div id="startScreen" class="center-screen">
+    <div class="welcome-love">Happy new year for the love of my life ❤️</div>
+    <h2>ادخل الباسورد عشان تشوف الهديه</h2>
+    <input type="password" id="passwordInput" placeholder="الباسورد">
+    <br><br>
+    <button onclick="checkPassword()">Enter</button>
+    <p>Hint: يوم ارتباطنا</p>
+</div>
+
+<div id="welcomeScreen" class="center-screen hidden">
+    <h1 id="welcomeAnim">Welcome Habibo 🎊💖</h1>
+</div>
+
+<div id="hearts" class="hearts hidden"></div>
+
+<div id="giftScreen" class="hidden">
+    <div class="tabs">
+        <button onclick="openTab('msg')">💌 Message</button>
+        <button onclick="openTab('photos')">📸 Photos</button>
+        <button onclick="openTab('video')">🎥 Video</button>
+        <button onclick="openTab('music')">🎶 Song</button>
+    </div>
+
+    <!-- MESSAGE -->
+    <div id="msg" class="tab-content">
+        <div class="message-box">
+حبيبه عمري وحبيبه ايامي وسنيني حبيبة قلبي وكل الي ليا ♥️  
+سنه عدت ف حبك وايام كتير جميله بينا وسنه جديده هتبدا وانتي جنبي ومعايا دايما ♥️  
+من يوم م عرفتك وانا مشوفتش احلي ولا اجمل منك ومن يوم م حبيتك وانا مكتفي بيكي ومش عاوز غيرك م الدنيا كلها ♥️🥹  
+ربنا يخليكي ليا وميحرمنيش منك ابدا وتفضلي ليا وجنبي ومعايا وبتاعتي انا وبس ♥️♥️  
+بحبك ومبحبش غيرك ف الدنيا كلها ولا عاوز غيرك م الدنيا كلها ♥️  
+بنيت حياتي كلها عليكي ومقدرش استغني عنك يوم ولا اعيش من غيرك ابدا ♥️  
+مقدرش ازعلك ابدا ولا يهون عليا زعلك والله ولا احب ف يوم اني ازعلك مني ولا يهون عليا اننا ننام زعلانين من بعض 🥹♥️  
+ومش هاين عليا اننا تبقي زعلانه مني ومتناميش ف حضني مش متعود انا علي كدا🥹  
+ربنا يديمك ف حياتي نعمه عشان انتي احلي نعمه ربنا ادهاني وبحمد ربنا عليها كل يوم ♥️  
+
+بحبك قد الكون كله ي حياتي كلها انتي ♥️  
+وان شاء الله تبقي السنه الجديده كلها فرح ميبقاش فيها يوم نزعل فيه من بعض  
+ونكون سوا لباقي العمر ي عمري كله انتي ♥️
+        </div>
+    </div>
+
+    <!-- PHOTOS -->
+    <div id="photos" class="tab-content">
+        <div class="photos-caption">كل صوره ليها ذكري وكل ذكري معاكي احلي من اللي قبلها ❤️</div>
+        <div class="gallery">
+            <img src="https://i.ibb.co/q33y2WDV/1.jpg">
+            <img src="https://i.ibb.co/4ZY29339/2.jpg">
+            <img src="https://i.ibb.co/Cpb70Mrq/3.jpg">
+            <img src="https://i.ibb.co/SXd0rr3S/4.jpg">
+            <img src="https://i.ibb.co/MDxfYhLt/5.jpg">
+            <img src="https://i.ibb.co/mVB95MWV/6.jpg">
+            <img src="https://i.ibb.co/PsBnZN2y/7.jpg">
+            <img src="https://i.ibb.co/3ySH9qLM/8.jpg">
+            <img src="https://i.ibb.co/svhmJhtJ/9.jpg">
+            <img src="https://i.ibb.co/4ZhWqpCm/10.jpg">
+            <img src="https://i.ibb.co/YBJsCsTK/11.jpg">
+            <img src="https://i.ibb.co/Z6pyf1Lb/12.jpg">
+            <img src="https://i.ibb.co/TXkQ1sj/13.jpg">
+            <img src="https://i.ibb.co/3yZCdw36/14.jpg">
+            <img src="https://i.ibb.co/Mkw8rYqv/15.jpg">
+            <img src="https://i.ibb.co/cK2DBxHV/16.jpg">
+            <img src="https://i.ibb.co/PzC329Cp/17.jpg">
+            <img src="https://i.ibb.co/7tG6GR9z/18.jpg">
+            <img src="https://i.ibb.co/xtXdd00B/19.jpg">
+            <img src="https://i.ibb.co/pv6RCmpQ/20.jpg">
+        </div>
+    </div>
+
+    <div id="video" class="tab-content">
+        <iframe src="https://streamable.com/e/8ay2h2" allowfullscreen></iframe>
+    </div>
+
+    <div id="music" class="tab-content">
+        <iframe src="https://www.youtube.com/embed/Hqw5Cd9_8tw" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+const correctPassword="13/8/2021";
+let played=false;
+
+function checkPassword(){
+    if(passwordInput.value.trim()===correctPassword){
+        startScreen.classList.add("hidden");
+        welcomeScreen.classList.remove("hidden");
+        startHearts();
+        setTimeout(()=>{
+            welcomeScreen.classList.add("hidden");
+            giftScreen.classList.remove("hidden");
+            hearts.classList.remove("hidden");
+            openTab('msg');
+        },2000);
+    }else{
+        alert("نسيتي!! 😅");
+    }
+}
+
+function openTab(id){
+    document.querySelectorAll('.tab-content').forEach(t=>t.style.display="none");
+    document.getElementById(id).style.display="block";
+    if(id==="msg"&&!played){
+        loveAudio.play();
+        played=true;
+    }
+}
+
+function startHearts(){
+    setInterval(()=>{
+        const h=document.createElement("div");
+        h.className="heart";
+        h.innerHTML="❤️";
+        h.style.left=Math.random()*100+"vw";
+        h.style.fontSize=Math.random()*18+12+"px";
+        hearts.appendChild(h);
+        setTimeout(()=>h.remove(),7000);
+    },400);
+}
+</script>
+
+</body>
+</html>
